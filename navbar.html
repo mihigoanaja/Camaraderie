@@ -1,0 +1,25 @@
+<style>
+.navbar{text-align:center;color:#000000;background-color:#ffffff;}
+.navbar a.navtab:hover{color:#444444;background-color:#eeeeee;}
+@media (orientation: landscape) {
+  .navbar a.navtab{color:#000000;display:inline-block;margin:10px;font-size:25px;font-weight:bold;font-family:arial;text-decoration: none;}
+}
+@media (orientation: portrait) {
+  .navbar a.navtab{color:#000000;display:none;margin:10px;font-size:25px;font-weight:bold;font-family:arial;text-decoration: none;box-shadow: 0 0 2px #005;padding:10px;text-align:center;}
+  input[type="checkbox"] + label:before {content:"+";font-size: 40px;}
+  input[type="checkbox"]:checked + label:before {content:"-";}
+  input[type="checkbox"]:checked ~ a.navtab {display: block;}
+}
+</style>
+<div class="navbar-frame">
+  <div class="navbar">
+    <input type="checkbox" id="mobile-menu-toggle" hidden>
+    <label for="mobile-menu-toggle" class="mobile-menu-toggle"></label>
+    <a class="navtab" href="#">Brand</a>
+    <a class="navtab" href="https://camaraderie.pages.dev">Home</a>
+<a class="navtab" href="https://news.alreflections.net/2025/04/camaraderie.html">About</a>
+<a class="navtab" href="https://prodcase.alreflections.net/@Camaraderie_Marketplace">Marketplace</a>
+<a class="navtab" href="https://searchwave.alreflections.net/@Camaraderie_Search">Search</a>
+<a class="navtab" href="https://nas.io/camaraderie">Community Center</a>
+  </div>
+</div>
