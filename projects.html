@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camaraderie Showcase – Community Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to right, #efe, #eef);
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px;
+            padding: 40px;
+            background: #eee;
+            box-shadow: 0 0 15px #0003;
+            border-radius: 15px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .project {
+            width: 100%;
+            margin-bottom: 20px;
+            background: #ffe;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .project h3 {
+            margin-top: 0;
+        }
+        .project p {
+            font-size: 16px;
+        }
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            background: #FFD700;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .project a:hover {
+            background: #FFC107;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        @media (orientation: landscape) {
+            .project {
+                width: 45%;
+            }
+            .container {
+                margin: 50px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Community Project Showcase</h1>
+        <p>See the amazing tools, apps, and creations built by members of Camaraderie.</p><div class="projects">
+        <div class="project">
+            <h3>Black Tiger</h3>
+            <p>All-in-one productivity tool with BMI calculator, notes, to-do, and job finder.</p>
+            <a href="https://blacktiger.alreflections.net/">Launch App</a>
+        </div>
+        <div class="project">
+            <h3>Stylemate CSS Framework</h3>
+            <p>Build sleek websites with ease using this light and efficient CSS framework.</p>
+            <a href="https://stylemate.pages.dev">View Docs</a>
+        </div>
+        <div class="project">
+            <h3>Skillbase Learning</h3>
+            <p>Explore programming lessons, business lessons and career-building materials for free.</p>
+            <a href="https://skillbase.alreflections.net/">Open Skillbase</a>
+        </div>
+        <div class="project">
+            <h3>ADD YOUR PROJECT</h3>
+            <a href="#" style="font-size:65px;display:flex;justify-content:center;align-items:center;min-height:100px;">+</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Camaraderie. All Rights Reserved.</p>
+    </div>
+</div>
+<div id="footer"></div>
+<script>
+    var url="https://atinas.alreflections.net/api/aHR0cHM6Ly9vbmV0YWcucGFnZXMuZGV2L2FscmVmbGVjdGlvbnMtZm9vdGVyLmh0bWw=";
+    fetch(url).then(r => r.text()).then(d => { document.getElementById("footer").innerHTML = d; });
+</script>
+
+</body>
+</html>
