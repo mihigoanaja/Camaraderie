@@ -1,0 +1,11 @@
+.navbar{text-align:center;color:#000000;background-color:#ffffff;}
+.navbar a.navtab:hover{color:#444444;background-color:#eeeeee;}
+@media (orientation: landscape) {
+	.navbar a.navtab{color:#000000;display:inline-block;margin:10px;font-size:25px;font-weight:bold;font-family:arial;text-decoration: none;}
+}
+@media (orientation: portrait) {
+	.navbar a.navtab{color:#000000;display:none;margin:10px;font-size:25px;font-weight:bold;font-family:arial;text-decoration: none;box-shadow: 0 0 2px #005;padding:10px;text-align:center;}
+	input[type="checkbox"] + label:before {content:"+";font-size: 40px;}
+	input[type="checkbox"]:checked + label:before {content:"-";}
+	input[type="checkbox"]:checked ~ a.navtab {display: block;}
+}
