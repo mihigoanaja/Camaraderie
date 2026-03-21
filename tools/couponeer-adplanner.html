@@ -1,0 +1,167 @@
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Couponeer Ad Widget Builder with Preview -->
+<style>
+/* Clean and Simple Style for Couponeer Ad Widget Generator */
+#couponeer-widget-config {
+background-color: #f9f9f9;
+color: #222;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+font-family: 'Segoe UI', Tahoma, sans-serif;
+max-width: 600px;
+margin: 20px auto;
+}
+#couponeer-widget-config h2 {
+font-size: 1.5em;
+margin-bottom: 15px;
+color: #333;
+}
+#couponeer-widget-config label {
+display: block;
+margin-bottom: 12px;
+font-size: 1em;
+}
+#couponeer-widget-config input[type="text"],
+#couponeer-widget-config input[type="number"],
+#couponeer-widget-config select,
+#couponeer-widget-config textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+font-size: 1em;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #fff;
+box-sizing: border-box;
+}
+#couponeer-widget-config textarea {
+resize: vertical;
+font-family: monospace;
+}
+#couponeer-widget-config button {
+background-color: #007acc;
+color: #fff;
+padding: 10px 18px;
+border: none;
+border-radius: 5px;
+font-size: 1em;
+cursor: pointer;
+margin-top: 10px;
+transition: background-color 0.3s ease;
+}
+#couponeer-widget-config button:hover {
+background-color: #005999;
+}
+/* Live Preview Section */
+#preview {
+margin-top: 20px;
+padding: 10px;
+border: 1px dashed #aaa;
+border-radius: 6px;
+background-color: #fff;
+}
+</style>
+<div id="couponeer-widget-config">
+<h2>Couponeer Ad Widget Generator</h2>
+<label>
+Keyword/Search Term:
+<input type="text" id="searchQuery" placeholder="e.g. discounts, shoes">
+</label>
+<br>
+<label>
+Your Affiliate Coupon Code:
+<input type="text" id="couponCode" placeholder="e.g. 123">
+</label>
+<br>
+<label>
+Number of Products to Display:
+<input type="number" id="limit" value="4" min="1" max="20">
+</label>
+<br>
+<label>
+Show Image:
+<select id="showImage">
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label>
+<br><br>
+<button id="generateWidget">Generate Embed Code</button>
+<br><br>
+<label>Embed Code:</label>
+<textarea id="embedCode" rows="8" style="width:100%"></textarea>
+</div>
+
+<hr>
+
+<div>
+<h3>Live Preview:</h3>
+<div id="preview"></div>
+</div>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+document.getElementById('generateWidget').addEventListener('click', generateWidgetCode);
+
+function generateWidgetCode() {
+const query = document.getElementById('searchQuery').value.trim();
+const coupon = document.getElementById('couponCode').value.trim();
+const limit = parseInt(document.getElementById('limit').value, 10);
+const showImage = document.getElementById('showImage').value;
+
+const embedHTML = `<div class="couponeer-results" data-query="${query}" data-coupon="${coupon}" data-limit="${limit}" data-show-image="${showImage}"></div>
+<link rel="stylesheet" href="https://reserve.alreflections.net/pullCouponeerResults.css"/>
+<script src="https://reserve.alreflections.net/pullCouponeerResults.js"><\/script>`;
+
+document.getElementById('embedCode').value = embedHTML;
+document.getElementById('preview').innerHTML = embedHTML;
+
+loadCouponeerAds();
+}
+
+function loadCouponeerAds() {
+Array.from(document.getElementsByClassName('couponeer-results')).forEach(resultsContainer => {
+const r = resultsContainer;
+
+const query = encodeURIComponent(r.dataset.query || 'discounts');
+const coupon = encodeURIComponent(r.dataset.coupon || '');
+const url = `https://couponeer.alreflections.net/api.php?client=app&q=${query}&coupon=${coupon}`;
+
+fetch(url)
+.then(response => response.json())
+.then(data => {
+resultsContainer.innerHTML = '';
+let resultCount = 0;
+let products = data.products || [];
+
+if (r.classList.contains('reverse')) {
+products = products.reverse();
+}
+
+products.forEach(product => {
+resultCount++;
+const showImage = r.dataset.showImage === 'yes' ? '' : 'display:none;';
+const productHTML = `
+<div class='result'>
+<img src='${product.image}' style='${showImage}' />
+<h2>${product.title}</h2>
+<p class='description'>${product.description}</p>
+<a class='button' href='${product.link}' target='_blank'>Buy Now</a>
+</div>
+`;
+
+if (!r.dataset.limit || resultCount <= parseInt(r.dataset.limit, 10)) {
+resultsContainer.innerHTML += productHTML;
+}
+});
+})
+.catch(error => {
+console.error('Error fetching Couponeer data:', error);
+resultsContainer.innerHTML = '<p>Error loading ads.</p>';
+});
+});
+}
+});
+</script>
+<link rel="stylesheet" href="https://reserve.alreflections.net/pullCouponeerResults.css"/>

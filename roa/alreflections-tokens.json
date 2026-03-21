@@ -1,0 +1,129 @@
+[
+  {
+    "token": "ask_about_alreflections",
+    "prompts": [
+      "What is Alreflections?",
+      "Tell me about Alreflections",
+      "Who runs Alreflections?",
+      "What does Alreflections offer?"
+    ],
+    "response": "Alreflections is a digital support initiative that helps individuals and teams build businesses through coding, blogging, marketing, and local enterprise development. It offers tools, training, and platforms to support creators and developers."
+  },
+  {
+    "token": "ask_about_app",
+    "prompts": [
+      "What is the Alreflections Programming Portal?",
+      "What can I do on APP?",
+      "How do I learn programming with APP?"
+    ],
+    "response": "The Alreflections Programming Portal (APP) offers free and guided resources to learn programming, low-code development, and innovation techniques. It's designed for beginners and active developers looking to grow or showcase their work."
+  },
+  {
+    "token": "business_support",
+    "prompts": [
+      "How does Alreflections help businesses?",
+      "Can you help me start a business?",
+      "I want to build an online business"
+    ],
+    "response": "Yes! Alreflections supports digital entrepreneurs by offering startup coaching, low-code tools, marketing strategies, and even platforms to showcase your work or sell your services."
+  },
+  {
+    "token": "alreflections_training",
+    "prompts": [
+      "Is there training available?",
+      "How can I join your online courses?",
+      "Where can I learn digital skills with Alreflections?"
+    ],
+    "response": "You can join Alreflections online trainings, which cover coding, marketing, business building, and more. Trainings come with daily handbooks, projects, and real-time guidance."
+  },
+  {
+    "token": "join_community",
+    "prompts": [
+      "How do I join the Alreflections community?",
+      "Is there a support group?",
+      "Can I join the Camaraderie platform?"
+    ],
+    "response": "You can join the Camaraderie platform, our official community space for support and growth. It’s designed for developers, creators, and entrepreneurs. You’ll get access to projects, training, challenges, and networking opportunities."
+  },
+  {
+    "token": "get_support",
+    "prompts": [
+      "I need support from Alreflections",
+      "Is there someone I can contact?",
+      "How do I get help with my project?"
+    ],
+    "response": "You can contact the Alreflections support team via support@alreflections.net. Let us know what you need help with, and we’ll guide you from there."
+  },
+  {
+    "token": "low_code_info",
+    "prompts": [
+      "What is the low-code project?",
+      "Tell me about Alreflections low-code tools",
+      "How can I build apps without coding?"
+    ],
+    "response": "Alreflections offers a low-code development approach, making it easier to build digital products with little to no coding. We guide you using platforms and tools supported by the Alreflections ecosystem."
+  },
+  {
+    "token": "project_showcase",
+    "prompts": [
+      "Where can I showcase my project?",
+      "Can I publish my work on your platform?",
+      "How do I share what I’ve built?"
+    ],
+    "response": "You can publish and showcase your projects through Alreflections platforms like APP and the community spotlight section. We help highlight your work to boost visibility and opportunity."
+  },
+  {
+    "token": "affiliate_program",
+    "prompts": [
+      "Do you have an affiliate program?",
+      "Can I earn by promoting Alreflections?",
+      "How do I join the Anaja Sales Team?"
+    ],
+    "response": "Yes! Join the Anaja Sales Team to promote our books, apps, and services and earn 10% commission using your unique affiliate coupon. You can get started by downloading the Couponeer app."
+  },
+  {
+    "token": "platforms_list",
+    "prompts": [
+      "What platforms does Alreflections offer?",
+      "List your websites",
+      "What products do you provide?"
+    ],
+    "response": "Alreflections manages a suite of platforms including Skillbase (eLearning), APP (programming), Couponeer (affiliate marketing), Rwanda Information Giant (search and listing), FormWorker (form handler), and many more."
+  },
+  {
+    "token": "tools_and_apis",
+    "prompts": [
+      "Do you have APIs?",
+      "Tell me about ATINAS APIs",
+      "Are there developer tools available?"
+    ],
+    "response": "Yes, we provide developer tools like the ATINAS Search APIs, FormWorker for form handling, and Stylemate CSS Framework to support your development and integration projects."
+  },
+  {
+    "token": "css_framework",
+    "prompts": [
+      "What is Stylemate?",
+      "Tell me about your CSS framework",
+      "How do I use Stylemate in my project?"
+    ],
+    "response": "Stylemate is our lightweight CSS framework designed to help you build beautiful UIs quickly. You can include it in your project using our CDN link and follow the documentation to apply styles easily."
+  },
+  {
+    "token": "content_request",
+    "prompts": [
+      "Do you provide handbooks?",
+      "Where can I get learning materials?",
+      "Can I download your books?"
+    ],
+    "response": "Yes, we provide handbooks, digital courses, and free resources through our platforms. Some of our best content is also available for download or through newsletters and the Camaraderie community."
+  },
+  {
+    "token": "register_company",
+    "prompts": [
+      "Is Alreflections a registered company?",
+      "Can I join as a partner?",
+      "How do I collaborate with you?"
+    ],
+    "response": "Yes, Alreflections is a registered company from Rwanda. We welcome partnerships and collaborations. Feel free to reach out if you'd like to work with us or support our mission."
+  }
+]

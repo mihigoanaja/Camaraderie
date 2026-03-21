@@ -1,30 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Camaraderie - A Community for Growth</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Welcome to Camaraderie</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+		<link rel="stylesheet" href="https://stylemate.alreflections.net/css/STYLEMATE-1.0.0.css">
+		<script src="/roa/main-V2.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      /*background-color: #1a0b0b;*/
+      color: #fff2e6;
+      padding-bottom: 70px;
+    }
+	*:has(>header) {
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+	  background-color: #eef;
+	}
+    header {
+      //background: linear-gradient(90deg, #4b0000, #800000);
+      color: #333;
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bolder;
+    }
+
+    section {
+      display: none;
+      padding: 1.2rem;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .card {
+      background-color: #eee;
+      //border: 1px solid #C2A400;
+      border-radius: 10px;
+      padding: 1.2rem;
+      margin: 1rem 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .card .card {
+      background-color:#ffe;
+	  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.5);
+	}
+
+    .card h2, .card h3 {
+      //color: #ffd700;
+    }
+
+    .chat-window {
+      background: #2b0e0e;
+      border: 1px solid #5c1a1a;
+      border-radius: 10px;
+      padding: 1rem;
+      height: 300px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      margin: 0.4rem 0;
+      max-width: 80%;
+      padding: 0.6rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      width: fit-content;
+    }
+
+    .user {
+      background-color: #8b0000;
+      align-self: flex-end;
+      color: #fff;
+      margin-left: auto;
+      text-align: right;
+      border-bottom-right-radius: 0px;
+    }
+
+    .bot {
+      background-color: #3e1212;
+      color: #ffd700;
+      margin-right: auto;
+      border-bottom-left-radius: 0px;
+    }
+
+    .chat-form input {
+      width: calc(100% - 2rem);
+      margin-top: 0.5rem;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #732626;
+      background: #3e1212;
+      color: #fff;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #1a0b0b;
+      color: #bb9c8d;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.6rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #ffe;
+      color: #000;
+      border: 1px solid #C2A400;
+    }
+    input,textarea {
+      width: 96%;
+    }
+
+    button.submit {
+      background-color: #FFD700;
+      color: #333;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3);
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #eef;
+      border-top: 1px solid #732626;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem 0;
+      z-index: 100;
+    }
+
+    .bottom-nav button {
+      background: none;
+      border: none;
+      //color: #fff2e6;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+	  color: #c2a400;
+    }
+
+    .bottom-nav button i {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .bottom-nav button:hover {
+      color: #335;
+    }
+	section#home {
+		text-align: center;
+		padding: 0px;
+	}
+    @media (min-width: 600px) {
+      body {
+        max-width: 500px;
+        margin: auto;
+      }
+    }
+	@media (orientation: landscape) {
+		body>div:first-child {
+		    display: flex;
+		}
+		
+		body {max-width: 100%;}
+		
+		section:not(#home) {
+		    max-width: 500px;
+		    margin: auto;
+		}
+		
+		header {
+		    width: 50%;
+		}
+		
+		.bottom-nav {
+		    position: unset;
+		    width: 100%;
+		    //background: linear-gradient(90deg, #800000,#4b0000);
+		}
+	}
+	a.contact-a {
+		color:#C2A400;
+	}
+  </style>
+</head>
+<body>
+<div>
+  <header>Camaraderie</header>
+  <div class="bottom-nav">
+    <button onclick="showSection('home')">
+      <i class="fas fa-home"></i>Home
+    </button>
+    <button onclick="document.location.href='https://www.alreflections.net/2025/02/struggling-to-grow-in-tech-business-or.html';">
+      <i class="fas fa-newspaper"></i>About
+    </button>
+    <button class="display-none" onclick="showSection('services')">
+      <i class="fas fa-cogs"></i>Services
+    </button>
+    <button onclick="showSection('contact')">
+      <i class="fas fa-envelope"></i>Contact
+    </button>
+    <button onclick='document.location.href="dashboard";'>
+      <i class="fas fa-user"></i>Account
+    </button>
+  </div>
+</div>
+
+  <!-- About with Chatbot -->
+  <section id="home" class="active">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            /*background: linear-gradient(to right, #007BFF, #00C6FF);*/
             background: linear-gradient(to right, #efe, #eef);
             color: #333;
         }
         .container {
             max-width: 900px;
-            margin: 50px;
+            margin: 20px;
             padding: 40px;
             background: #eee;
             box-shadow: 0 0 15px #0003;
             border-radius: 15px;
         }
         h1 {
-            font-size: 36px;
             margin-bottom: 20px;
+			font-size: clamp(25px, 5vw, 36px);
         }
         p {
             font-size: 18px;
@@ -44,6 +260,7 @@
             font-size: 18px;
             border-radius: 10px;
             transition: background 0.3s ease;
+			font-size: clamp(15px, 5vw, 18px);
         }
         .btn:hover {
             background: #FFC107;
@@ -74,16 +291,19 @@
               margin: 50px auto;
             }
         }
+        @media (orientation: portrait) {
+			.mo-display-none {
+				display: none;
+			}
+		}
     </style>
-</head>
-<body>
     <div class="container">
         <h1>Welcome to the Camaraderie</h1>
-        <p>Join a thriving community of visionaries, creators, and professionals collaborating to build success together.</p>
+        <p class="mo-display-none">Join a thriving community of visionaries, creators, and professionals collaborating to build success together.</p>
         <p>Learn new skills, access exclusive resources, and network with like-minded people who share your ambitions.</p>
         
         <div class="cta">
-            <a href="https://nas.io/camaraderie" class="btn">Join Camaraderie Now</a>
+            <a href="dashboard" class="btn">Join Now</a>
         </div>
         
         <div class="features">
@@ -104,13 +324,195 @@
                 <p>Engage with like-minded individuals from all around the world.</p>
             </div>
         </div>
-        
-        <div class="footer">
-            <p>&copy; 2025 Camaraderie. All Rights Reserved.</p>
-        </div>
     </div>
     <div id="footer"></div>
-    <script>var url="https://atinas.alreflections.net/api/aHR0cHM6Ly9vbmV0YWcucGFnZXMuZGV2L2FscmVmbGVjdGlvbnMtZm9vdGVyLmh0bWw=";fetch(url).then(r=>{var response=r;response.text().then(d=>{var data=d;footer.innerHTML=data;});});</script>
-    <script src='https://reserve-cc2.pages.dev/treateAlreflectionsBlogger.js'></script>
+    <!--<script src='https://reserve-cc2.pages.dev/treateAlreflectionsBlogger.js'></script>-->
+	
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="card" style="display-none">
+      <h2>Our Services</h2>
+      <ul>
+        <li>High-End Tech & Business Training</li>
+        <li>Custom Web & Mobile Solutions</li>
+        <li>Luxury Brand Strategy & Marketing</li>
+        <li>Startup Launchpad & Advisory</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Request a Service</h2>
+      <form method="get" action="https://formworker.alreflections.net/plugin/ZXlKMWMyVnlJam9pTVNKOQ==">
+	<input name="next" value="https://camaraderie.alreflections.net/#thankyou" hidden/>
+        <input name="clientname" type="text" placeholder="Your Name" required />
+        <input name="text" type="text" placeholder="Your Email or Phone number" required />
+        <select id="categoryPicker" required>
+          <option disabled selected>Select a Service Category</option>
+        </select>
+        <select id="servicePicker" name="service" required>
+          <option disabled selected>Select a Service</option>
+        </select>
+        <textarea name="message" rows="3" placeholder="Describe your needs..." required></textarea>
+        <button type="submit" class="submit">Request Service</button>
+      </form>
+      <p id="serviceResponse" style="margin-top:10px; color: #ffd700;"></p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="card">
+      <h3>Contact Us</h3>
+	<div>
+          <strong>Tel:</strong>&nbsp;<a class="contact-a" href="tel:+250792548478">+250792548478</a><br />
+          <strong>Email:</strong>&nbsp;<a class="contact-a" href="mailto:camaraderie@alreflections.net">camaraderie@alreflections.net</a>
+	</div>
+      <form method="get" action="https://formworker.alreflections.net/plugin/ZXlKMWMyVnlJam9pTVNKOQ==">
+        <input name="next" value="https://camaraderie.alreflections.net/#thankyou" hidden/>
+        <input name="clientname" type="text" placeholder="Your Name" required />
+        <input name="contact" type="text" placeholder="Your Email or Phone number" required />
+        <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit">Send</button>
+      </form>
+      <p id="response" style="margin-top:10px; color: #ffd700;"></p>
+    </div>
+  </section>
+
+<section id="thankyou">
+  <div class="card" style="text-align: center;">
+    <h2 style="color: #C2A400;">🎉 Thank You!</h2>
+    <p>Your request has been received successfully.</p>
+    <p>We’ll get back to you as soon as possible.</p>
+    <button onclick="goHome()" class="submit" style="margin-top: 1rem;">Return to Home</button>
+  </div>
+</section>
+
+<section id="dashboard">
+  <div class="card">
+    <h2 style="text-align:center;"><i class="fas fa-tachometer-alt"></i> User Dashboard</h2>
+    
+    <a href="https://skillbase.alreflections.net/courses/public.php" style="text-decoration: none;">
+      <div class="card" style="margin-top: 1rem;">
+        <i class="fas fa-chalkboard-user" style="color: #C2A400;"></i>
+        <strong style="margin-left:0.5rem;color:#333;">Online Courses</strong>
+        <p style="font-size: 0.9rem; color: #000;">Access free learning materials and grow your skills.</p>
+      </div>
+    </a>
+
+    <a href="https://kinbook.alreflections.net/" style="text-decoration: none;">
+      <div class="card" style="margin-top: 1rem;">
+        <i class="fas fa-book" style="color: #C2A400;"></i>
+        <strong style="margin-left:0.5rem;color:#333;">Download eBooks</strong>
+        <p style="font-size: 0.9rem; color: #000;">Pick from our catalog of both free and paid books.</p>
+      </div>
+    </a>
+	
+	<a href="https://camaraderie.alreflections.net/inventoryhubris" style="text-decoration: none;">
+      <div class="card" style="margin-top: 1rem;">
+        <i class="fas fa-warehouse" style="color: #C2A400;"></i>
+        <strong style="margin-left:0.5rem;color:#333;">Inventory Hubris</strong>
+        <p style="font-size: 0.9rem; color: #000;">Manage and monitor your inventory easily.</p>
+      </div>
+    </a>
+
+    <a href="https://camaraderie.alreflections.net/littleshark" style="text-decoration: none;">
+      <div class="card">
+        <i class="fas fa-fish" style="color: #C2A400;"></i>
+        <strong style="margin-left: 0.5rem; color: #333;">Little Shark</strong>
+        <p style="font-size: 0.9rem; color: #000;">Your smart assistant in coding.</p>
+      </div>
+    </a>
+
+    <a href="https://atinas.alreflections.net/tools" style="text-decoration: none;" class="display-none">
+      <div class="card">
+        <i class="fas fa-tools" style="color: #C2A400;"></i>
+        <strong style="margin-left: 0.5rem; color: #333;">More Tools</strong>
+        <p style="font-size: 0.9rem; color: #000;">Access productivity & innovation tools.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function sendMessage(event) {
+      event.preventDefault();
+      document.getElementById("response").innerText = "Message sent successfully!";
+      setTimeout(() => {
+        document.getElementById("response").innerText = "";
+      }, 3000);
+      event.target.reset();
+    }
+
+    function submitServiceRequest(event) {
+      event.preventDefault();
+      document.getElementById("serviceResponse").innerText = "Service request submitted!";
+      setTimeout(() => {
+        document.getElementById("serviceResponse").innerText = "";
+      }, 3000);
+      event.target.reset();
+    }
+
+    async function sendChatMessage(event) {
+      event.preventDefault();
+      const input = document.getElementById("userInput");
+      const message = input.value.trim();
+      if (!message) return;
+
+      var response=await roa.getResponse(message);
+      const chatWindow = document.getElementById("chatWindow");
+      const userMsg = document.createElement("div");
+      userMsg.className = "message user";
+      userMsg.innerText = message;
+      chatWindow.appendChild(userMsg);
+
+      const botMsg = document.createElement("div");
+      botMsg.className = "message bot";
+      botMsg.innerText = response!=''?response:"I’m not sure I understand your question fully, but I’d love to help. Could you please rephrase or provide more detail?";
+      chatWindow.appendChild(botMsg);
+
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+      input.value = "";
+    }
+    (function renderService(categoriesElement) {
+	fetch("./services.json").then((a=>{
+		a.json().then((b)=>{
+			servicesJSON=b;
+			b.forEach((service)=>{
+				if (service.category=='none') {
+					categoriesElement.innerHTML+=`<option value="${service.title}">${service.title}</option>`;
+				}
+			});
+		});
+	}));
+	})(categoryPicker);
+	categoryPicker.addEventListener('change',()=>{
+		servicePicker.innerHTML="<option disabled selected>Loading...</option>";
+		setTimeout(()=>{				
+			servicePicker.innerHTML="<option disabled selected>Select a Service</option>";
+			servicesJSON.forEach((i,x)=>{
+				if (i.title==categoryPicker.value){
+					servicesJSON.forEach((service)=>{
+						if (service.category==x){
+							servicePicker.innerHTML+=`<option value="${service.title}">${service.title}</option>`;
+						}
+					});
+				}
+			});
+		},2000);
+	});
+	
+	function goHome() {document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));document.getElementById('home').classList.add('active');}
+	if (document.location.hash.includes('#thankyou')) showSection('thankyou');
+	if (document.location.hash=='#services') showSection('services');
+	if (document.location.hash=='#contact') showSection('contact');
+  </script>
+	<script src="https://onetag.pages.dev/atinas-analytics.js" async ></script>
 </body>
 </html>
