@@ -460,6 +460,7 @@
 </section>
 
   <script>
+	(location.host=="camaraderie.pages.dev")&&((()=>location.href="https://camaraderie.alreflections.net/")());
     function showSection(id) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
