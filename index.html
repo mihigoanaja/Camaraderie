@@ -124,7 +124,6 @@
 				left: 0;
 				right: 0;
 				background: #eef;
-				border-top: 1px solid #732626;
 				display: flex;
 				justify-content: space-around;
 				padding: 0.5rem 0;
@@ -293,6 +292,9 @@
 					.mo-display-none {
 						display: none;
 					}
+					.bottom-nav {
+						border-top: 1px solid #732626;
+					}
 				}
 			</style>
 			<div class="container">
@@ -386,191 +388,187 @@
 			</div>
 		</section>
 
-<section id="dashboard">
-	<div class="card dashboard-buttons">
-		<h2 style="text-align:center;">Welcome</h2>
-		<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-home')">
-			<i class="fas fa-home" style="color: #C2A400;"></i>
-			<strong style="margin-left:0.5rem;color:#333;">Home</strong>
-		</div>
-		<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-learners')">
-			<i class="fas fa-book" style="color: #C2A400;"></i>
-			<strong style="margin-left:0.5rem;color:#333;">Learning Materials</strong>
-		</div>
-		<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-creators')">
-			<i class="fas fa-palette" style="color: #C2A400;"></i>
-			<strong style="margin-left:0.5rem;color:#333;">Creator Tools</strong>
-		</div>
-		<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-business')">
-			<i class="fas fa-briefcase" style="color: #C2A400;"></i>
-			<strong style="margin-left:0.5rem;color:#333;">Business Tools</strong>
-		</div>
-		<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-developers')">
-			<i class="fas fa-laptop" style="color: #C2A400;"></i>
-			<strong style="margin-left:0.5rem;color:#333;">Developer Tools</strong>
-		</div>
-		<div class="card" style="margin-top: 1rem; display: none;" onclick="showDashboardCards('other')">
-			<i class="fas fa-list" style="color: #C2A400;"></i>
-			<strong style="margin-left:0.5rem;color:#333;">Others</strong>
-		</div>
-	</div>
-	<div class="card dashboard-cards">
-		<h2 style="text-align:center;"><i class="fas fa-tachometer-alt"></i> User Dashboard</h2>
-		<a href="https://skillbase.alreflections.net/accounts/atinas" style="text-decoration: none;">
-			<div class="card for-learners for-home" style="margin-top: 1rem;">
-				<i class="fas fa-chalkboard-user" style="color: #C2A400;"></i>
-				<strong style="margin-left:0.5rem;color:#333;">Online Courses</strong>
-				<p style="font-size: 0.9rem; color: #000;">Access free learning materials and grow your skills.</p>
+		<section id="dashboard">
+			<div class="card dashboard-buttons">
+				<h2 style="text-align:center;">Welcome</h2>
+				<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-home')">
+					<i class="fas fa-home" style="color: #C2A400;"></i>
+					<strong style="margin-left:0.5rem;color:#333;">Home</strong>
+				</div>
+				<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-learners')">
+					<i class="fas fa-book" style="color: #C2A400;"></i>
+					<strong style="margin-left:0.5rem;color:#333;">Learning Materials</strong>
+				</div>
+				<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-creators')">
+					<i class="fas fa-palette" style="color: #C2A400;"></i>
+					<strong style="margin-left:0.5rem;color:#333;">Creator Tools</strong>
+				</div>
+				<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-business')">
+					<i class="fas fa-briefcase" style="color: #C2A400;"></i>
+					<strong style="margin-left:0.5rem;color:#333;">Business Tools</strong>
+				</div>
+				<div class="card" style="margin-top: 1rem;" onclick="showDashboardCards('for-developers')">
+					<i class="fas fa-laptop" style="color: #C2A400;"></i>
+					<strong style="margin-left:0.5rem;color:#333;">Developer Tools</strong>
+				</div>
+				<div class="card" style="margin-top: 1rem; display: none;" onclick="showDashboardCards('other')">
+					<i class="fas fa-list" style="color: #C2A400;"></i>
+					<strong style="margin-left:0.5rem;color:#333;">Others</strong>
+				</div>
 			</div>
-		</a>
-		<a href="https://books.synergize.co/" style="text-decoration: none;">
-			<div class="card for-learners" style="margin-top: 1rem;">
-				<i class="fas fa-book" style="color: #C2A400;"></i>
-				<strong style="margin-left:0.5rem;color:#333;">Download eBooks</strong>
-				<p style="font-size: 0.9rem; color: #000;">Pick from our catalog of both free and paid books.</p>
+			<div class="card dashboard-cards">
+				<h2 style="text-align:center;"><i class="fas fa-tachometer-alt"></i> User Dashboard</h2>
+				<a href="https://skillbase.alreflections.net/accounts/atinas" style="text-decoration: none;">
+					<div class="card for-learners for-home" style="margin-top: 1rem;">
+						<i class="fas fa-chalkboard-user" style="color: #C2A400;"></i>
+						<strong style="margin-left:0.5rem;color:#333;">Online Courses</strong>
+						<p style="font-size: 0.9rem; color: #000;">Access free learning materials and grow your skills.</p>
+					</div>
+				</a>
+				<a href="https://books.synergize.co/" style="text-decoration: none;">
+					<div class="card for-learners" style="margin-top: 1rem;">
+						<i class="fas fa-book" style="color: #C2A400;"></i>
+						<strong style="margin-left:0.5rem;color:#333;">Download eBooks</strong>
+						<p style="font-size: 0.9rem; color: #000;">Pick from our catalog of both free and paid books.</p>
+					</div>
+				</a>
+				<a href="https://formworker.alreflections.net/" style="text-decoration: none;">
+					<div class="card for-developers for-business" style="margin-top: 1rem;">
+						<i class="fas fa-list" style="color: #C2A400;"></i>
+						<strong style="margin-left:0.5rem;color:#333;">Forms Management</strong>
+						<p style="font-size:0.9rem;color:#000;">Build online forms with ease and track submissions as well.</p>
+					</div>
+				</a>
+				<a href="https://couponeer.alreflections.net/" style="text-decoration: none;">
+					<div class="card for-creators for-home" style="margin-top: 1rem;">
+						<i class="fas fa-dollar-sign" style="color: #C2A400;"></i>
+						<strong style="margin-left:0.5rem;color:#333;">Content Monetisation</strong>
+						<p style="font-size:0.9rem;color:#000;">Earn by monetising your website or social media channels</p>
+					</div>
+				</a>
+				<a href="https://vidcase.alreflections.net/" style="text-decoration: none;">
+					<div class="card for-creators" style="margin-top: 1rem;">
+						<i class="fas fa-play-circle" style="color: #C2A400;"></i>
+						<strong style="margin-left:0.5rem;color:#333;">Vidcase For YouTubers</strong>
+						<p style="font-size:0.9rem;color:#000;">Promote Your YouTube Videos While You Also Activate Early Monetisation</p>
+					</div>
+				</a>
+				<a href="https://camaraderie.alreflections.net/inventoryhubris" style="text-decoration: none;">
+					<div class="card for-business" style="margin-top: 1rem;">
+						<i class="fas fa-warehouse" style="color: #C2A400;"></i>
+						<strong style="margin-left:0.5rem;color:#333;">Inventory Hubris</strong>
+						<p style="font-size: 0.9rem; color: #000;">Manage and monitor your inventory easily.</p>
+					</div>
+				</a>
+				<a href="https://camaraderie.alreflections.net/littleshark" style="text-decoration: none;">
+					<div class="card for-developers">
+						<i class="fas fa-fish" style="color: #C2A400;"></i>
+						<strong style="margin-left: 0.5rem; color: #333;">Little Shark</strong>
+						<p style="font-size: 0.9rem; color: #000;">Your smart assistant in coding.</p>
+					</div>
+				</a>
+				<a href="https://atinas.alreflections.net/tools" style="text-decoration: none;" class="display-none">
+					<div class="card">
+						<i class="fas fa-tools" style="color: #C2A400;"></i>
+						<strong style="margin-left: 0.5rem; color: #333;">More Tools</strong>
+						<p style="font-size: 0.9rem; color: #000;">Access productivity & innovation tools.</p>
+					</div>
+				</a>
 			</div>
-		</a>
-		<a href="https://formworker.alreflections.net/" style="text-decoration: none;">
-			<div class="card for-developers for-business" style="margin-top: 1rem;">
-				<i class="fas fa-list" style="color: #C2A400;"></i>
-				<strong style="margin-left:0.5rem;color:#333;">Forms Management</strong>
-				<p style="font-size:0.9rem;color:#000;">Build online forms with ease and track submissions as well.</p>
-			</div>
-		</a>
-		<a href="https://couponeer.alreflections.net/" style="text-decoration: none;">
-			<div class="card for-creators for-home" style="margin-top: 1rem;">
-				<i class="fas fa-dollar-sign" style="color: #C2A400;"></i>
-				<strong style="margin-left:0.5rem;color:#333;">Content Monetisation</strong>
-				<p style="font-size:0.9rem;color:#000;">Earn by monetising your website or social media channels</p>
-			</div>
-		</a>
-	
-	<a href="https://vidcase.alreflections.net/" style="text-decoration: none;">
-      <div class="card for-creators" style="margin-top: 1rem;">
-        <i class="fas fa-play-circle" style="color: #C2A400;"></i>
-        <strong style="margin-left:0.5rem;color:#333;">Vidcase For YouTubers</strong>
-        <p style="font-size:0.9rem;color:#000;">Promote Your YouTube Videos While You Also Activate Early Monetisation</p>
-      </div>
-    </a>
-	
-	<a href="https://camaraderie.alreflections.net/inventoryhubris" style="text-decoration: none;">
-      <div class="card for-business" style="margin-top: 1rem;">
-        <i class="fas fa-warehouse" style="color: #C2A400;"></i>
-        <strong style="margin-left:0.5rem;color:#333;">Inventory Hubris</strong>
-        <p style="font-size: 0.9rem; color: #000;">Manage and monitor your inventory easily.</p>
-      </div>
-    </a>
+		</section>
 
-    <a href="https://camaraderie.alreflections.net/littleshark" style="text-decoration: none;">
-      <div class="card for-developers">
-        <i class="fas fa-fish" style="color: #C2A400;"></i>
-        <strong style="margin-left: 0.5rem; color: #333;">Little Shark</strong>
-        <p style="font-size: 0.9rem; color: #000;">Your smart assistant in coding.</p>
-      </div>
-    </a>
+		<script>
+			(location.host=="camaraderie.pages.dev")&&((()=>location.href="https://camaraderie.alreflections.net/")());
+			function showDashboardCards(classname) {
+				var dashboardCards=document.getElementsByClassName("dashboard-cards")[0];
+				/* Remove .active class */
+				Array.from(dashboardCards.getElementsByClassName("card")).forEach((card)=>{
+					card.classList.contains("active")&&card.classList.remove("active");
+				});
+				/* Add .active class */
+				Array.from(dashboardCards.getElementsByClassName(classname)).forEach((card)=>{
+					card.classList.add("active");
+				});
+				dashboardCards.scrollIntoView();
+			}
+			showDashboardCards('for-home');
+			function showSection(id) {
+				document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+				document.getElementById(id).classList.add('active');
+			}
+			
+			function sendMessage(event) {
+				event.preventDefault();
+				document.getElementById("response").innerText = "Message sent successfully!";
+				setTimeout(() => {
+					document.getElementById("response").innerText = "";
+				}, 3000);
+				event.target.reset();
+			}
 
-    <a href="https://atinas.alreflections.net/tools" style="text-decoration: none;" class="display-none">
-      <div class="card">
-        <i class="fas fa-tools" style="color: #C2A400;"></i>
-        <strong style="margin-left: 0.5rem; color: #333;">More Tools</strong>
-        <p style="font-size: 0.9rem; color: #000;">Access productivity & innovation tools.</p>
-      </div>
-    </a>
-  </div>
-</section>
+			function submitServiceRequest(event) {
+				event.preventDefault();
+				document.getElementById("serviceResponse").innerText = "Service request submitted!";
+				setTimeout(() => {
+					document.getElementById("serviceResponse").innerText = "";
+				}, 3000);
+				event.target.reset();
+			}
 
-  <script>
-	(location.host=="camaraderie.pages.dev")&&((()=>location.href="https://camaraderie.alreflections.net/")());
-	function showDashboardCards(classname) {
-		var dashboardCards=document.getElementsByClassName("dashboard-cards")[0];
-		/* Remove .active class */
-		Array.from(dashboardCards.getElementsByClassName("card")).forEach((card)=>{
-			card.classList.contains("active")&&card.classList.remove("active");
-		});
-		/* Add .active class */
-		Array.from(dashboardCards.getElementsByClassName(classname)).forEach((card)=>{
-			card.classList.add("active");
-		});
-		dashboardCards.scrollIntoView()
-	}
-	showDashboardCards('for-home');
-    function showSection(id) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
+			async function sendChatMessage(event) {
+				event.preventDefault();
+				const input = document.getElementById("userInput");
+				const message = input.value.trim();
+				if (!message) return;
+			
+				var response=await roa.getResponse(message);
+				const chatWindow = document.getElementById("chatWindow");
+				const userMsg = document.createElement("div");
+				userMsg.className = "message user";
+				userMsg.innerText = message;
+				chatWindow.appendChild(userMsg);
 
-    function sendMessage(event) {
-      event.preventDefault();
-      document.getElementById("response").innerText = "Message sent successfully!";
-      setTimeout(() => {
-        document.getElementById("response").innerText = "";
-      }, 3000);
-      event.target.reset();
-    }
+				const botMsg = document.createElement("div");
+				botMsg.className = "message bot";
+				botMsg.innerText = response!=''?response:"I’m not sure I understand your question fully, but I’d love to help. Could you please rephrase or provide more detail?";
+				chatWindow.appendChild(botMsg);
 
-    function submitServiceRequest(event) {
-      event.preventDefault();
-      document.getElementById("serviceResponse").innerText = "Service request submitted!";
-      setTimeout(() => {
-        document.getElementById("serviceResponse").innerText = "";
-      }, 3000);
-      event.target.reset();
-    }
-
-    async function sendChatMessage(event) {
-      event.preventDefault();
-      const input = document.getElementById("userInput");
-      const message = input.value.trim();
-      if (!message) return;
-
-      var response=await roa.getResponse(message);
-      const chatWindow = document.getElementById("chatWindow");
-      const userMsg = document.createElement("div");
-      userMsg.className = "message user";
-      userMsg.innerText = message;
-      chatWindow.appendChild(userMsg);
-
-      const botMsg = document.createElement("div");
-      botMsg.className = "message bot";
-      botMsg.innerText = response!=''?response:"I’m not sure I understand your question fully, but I’d love to help. Could you please rephrase or provide more detail?";
-      chatWindow.appendChild(botMsg);
-
-      chatWindow.scrollTop = chatWindow.scrollHeight;
-      input.value = "";
-    }
-    (function renderService(categoriesElement) {
-	fetch("./services.json").then((a=>{
-		a.json().then((b)=>{
-			servicesJSON=b;
-			b.forEach((service)=>{
-				if (service.category=='none') {
-					categoriesElement.innerHTML+=`<option value="${service.title}">${service.title}</option>`;
-				}
-			});
-		});
-	}));
-	})(categoryPicker);
-	categoryPicker.addEventListener('change',()=>{
-		servicePicker.innerHTML="<option disabled selected>Loading...</option>";
-		setTimeout(()=>{				
-			servicePicker.innerHTML="<option disabled selected>Select a Service</option>";
-			servicesJSON.forEach((i,x)=>{
-				if (i.title==categoryPicker.value){
-					servicesJSON.forEach((service)=>{
-						if (service.category==x){
-							servicePicker.innerHTML+=`<option value="${service.title}">${service.title}</option>`;
+				chatWindow.scrollTop = chatWindow.scrollHeight;
+				input.value = "";
+			}
+			(function renderService(categoriesElement) {
+				fetch("./services.json").then((a=>{
+					a.json().then((b)=>{
+						servicesJSON=b;
+						b.forEach((service)=>{
+							if (service.category=='none') {
+								categoriesElement.innerHTML+=`<option value="${service.title}">${service.title}</option>`;
+							}
+						});
+					});
+				}));
+			})(categoryPicker);
+			categoryPicker.addEventListener('change',()=>{
+				servicePicker.innerHTML="<option disabled selected>Loading...</option>";
+				setTimeout(()=>{				
+					servicePicker.innerHTML="<option disabled selected>Select a Service</option>";
+					servicesJSON.forEach((i,x)=>{
+						if (i.title==categoryPicker.value){
+							servicesJSON.forEach((service)=>{
+								if (service.category==x){
+									servicePicker.innerHTML+=`<option value="${service.title}">${service.title}</option>`;
+								}
+							});
 						}
 					});
-				}
+				},2000);
 			});
-		},2000);
-	});
 	
-	function goHome() {document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));document.getElementById('home').classList.add('active');}
-	if (document.location.hash.includes('#thankyou')) showSection('thankyou');
-	if (document.location.hash=='#services') showSection('services');
-	if (document.location.hash=='#contact') showSection('contact');
-  </script>
-	<script src="https://onetag.pages.dev/atinas-analytics.js" async ></script>
-</body>
+			function goHome() {document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));document.getElementById('home').classList.add('active');}
+			if (document.location.hash.includes('#thankyou')) showSection('thankyou');
+			if (document.location.hash=='#services') showSection('services');
+			if (document.location.hash=='#contact') showSection('contact');
+		</script>
+		<script src="https://onetag.pages.dev/atinas-analytics.js" async ></script>
+	</body>
 </html>
