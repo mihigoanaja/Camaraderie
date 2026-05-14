@@ -1,0 +1,1 @@
+(()=>{var target=document.createElement('div');document.body.appendChild(target);var url="https://camaraderie.pages.dev/widgets/invite.html";fetch(url).then(r=>{var response=r;response.text().then(d=>{var data=d;target.innerHTML=data;});});})();
